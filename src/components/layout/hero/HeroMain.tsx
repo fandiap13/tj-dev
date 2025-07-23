@@ -45,7 +45,7 @@ const HeroMain = () => {
       </div>
 
       <div className="mt-28 flex justify-center w-full">
-        <div className="w-full lg:w-[700px] 2xl:w-full lg:h-[600px] 2xl:h-[800px] relative">
+        <div className="w-full h-[200px] lg:h-[600px] 2xl:h-[800px] relative">
           <div
             className="absolute left-0 right-0 top-12 m-auto max-w-3xl h-[250px] sm:h-[300px] lg:h-[650px] blur-[160px]"
             style={{
