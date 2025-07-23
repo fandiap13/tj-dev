@@ -1,12 +1,35 @@
 "use client";
 
-import ThemeToggle from "@/components/theme/ThemeToggle";
+import { MenuItems } from "@/types/layout/layoutTypes";
 import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import LogoNavbar from "./LogoNavbar";
-import NavbarMenu from "./NavbarMenu";
+import NavbarMenuDekstop from "./NavbarMenuDekstop";
+import NavbarMenuMobile from "./NavbarMenuMobile";
+
+const mainMenu: MenuItems[] = [
+  {
+    name: "Beranda",
+    href: "/",
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio",
+  },
+  {
+    name: "Layanan",
+    href: "/services",
+  },
+  {
+    name: "Tentang Kami",
+    href: "/about-us",
+  },
+];
 
 const NavbarMain = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="fixed left-0 right-0 top-10 max-w-screen-xl px-5 xl:px-0 h-auto mx-auto z-[991] flex items-center gap-2">
       <div className="group/nav relative w-full p-px rounded-full backdrop-blur-lg bg-transparent flex items-center transition-all text-default-text hover:shadow-navbarPrimaryShadow duration-500">
@@ -20,7 +43,7 @@ const NavbarMain = () => {
           </div>
 
           <div className="flex items-center gap-10">
-            <NavbarMenu />
+            <NavbarMenuDekstop menuItems={mainMenu} />
 
             <div className="flex items-center gap-2">
               <motion.button
@@ -30,13 +53,18 @@ const NavbarMain = () => {
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 className="block lg:hidden p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer duration-300"
                 aria-label="Toggle theme"
+                onClick={() => setMenuOpen(!menuOpen)}
               >
-                <Menu className="h-5 w-5 text-slate-600 dark:text-slate-400" />
+                {menuOpen ? (
+                  <X className="h-5 w-5 text-slate-600 dark:text-slate-400" />
+                ) : (
+                  <Menu className="h-5 w-5 text-slate-600 dark:text-slate-400" />
+                )}
               </motion.button>
 
-              <div className="hidden lg:block">
+              {/* <div className="hidden lg:block">
                 <ThemeToggle />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -44,9 +72,11 @@ const NavbarMain = () => {
         <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-my-primary/0 via-my-primary/90 to-cyan-400/0 transition-opacity duration-500 group-hover/nav:opacity-40"></span>
       </div>
 
-      <div className="block lg:hidden">
+      {/* <div className="block lg:hidden">
         <ThemeToggle className="w-12 h-12" />
-      </div>
+      </div> */}
+
+      <NavbarMenuMobile menuOpen={menuOpen} menuItems={mainMenu} />
     </nav>
   );
 };

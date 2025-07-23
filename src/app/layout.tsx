@@ -1,3 +1,4 @@
+import LoadingPage from "@/components/layout/loading/LoadingPage";
 import { ThemeProvider } from "@/context/ThemeContext";
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
@@ -26,12 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${inter.variable} ${roboto.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <LoadingPage>{children}</LoadingPage>
+        </ThemeProvider>
       </body>
     </html>
   );
