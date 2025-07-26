@@ -30,7 +30,7 @@ export const services = [
 
 const WhyUs = () => {
   return (
-    <section id="services" className="container-content mt-32 lg:mt-44">
+    <section id="services" className="container-content pt-40 lg:pt-64">
       <div className="text-center space-y-5 max-w-3xl mx-auto">
         <h1 className="text-3xl lg:text-4xl xl:text-5xl text-left lg:text-center font-bold bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent leading-tight">
           Mengapa Memilih Kami?

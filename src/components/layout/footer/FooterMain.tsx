@@ -1,6 +1,6 @@
 const FooterMain = () => {
   return (
-    <footer id="footer" className="mt-32 lg:mt-44">
+    <footer id="footer" className="pt-40 lg:pt-64">
       <div className="h-[400px] flex items-center justify-center relative">
         <div className="container-content">
           <div

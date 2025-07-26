@@ -34,16 +34,17 @@ const HeroMain = () => {
       <motion.div
         ref={ref}
         style={{ opacity, y: translateY }}
-        className="text-center mx-auto max-w-3xl pt-32 lg:pt-52 tracking-tight transform translate-y-0"
+        className="text-center mx-auto max-w-3xl pt-32 lg:pt-64 tracking-tight transform translate-y-0"
       >
         <h1 className="text-3xl lg:text-4xl xl:text-6xl font-extrabold capitalize heading-gradient gradient-white-fade">
           solusi software terjangkau, cepat, dan profesional
         </h1>
 
-        <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent font-semibold mt-8">
-          TerimaJadi berfokus pada pembuatan software dan website yang
-          terjangkau, cepat, dan profesional, namun tetap fleksibel untuk
-          menyesuaikan kebutuhan pengguna.
+        <p className="text-base lg:text-lg xl:text-xl 2xl:text-2xl text-zinc-400  font-semibold mt-8">
+          <span className="text-my-primary">TerimaJadi</span> berfokus pada
+          pembuatan software dan website yang terjangkau, cepat, dan
+          profesional, namun tetap fleksibel untuk menyesuaikan kebutuhan
+          pengguna.
         </p>
 
         <div className="flex justify-center mt-6 lg:mt-10">
@@ -66,22 +67,53 @@ const HeroMain = () => {
         </div>
       </motion.div>
 
-      <div className="mt-16 lg:mt-28 flex justify-center w-full">
-        <div className="w-full h-[300px] sm:w-[400px] sm:h-[400px] lg:h-[600px] lg:w-full 2xl:h-[700px] relative">
-          <div
-            className="absolute left-0 right-0 top-12 m-auto max-w-3xl w-full h-full blur-[160px]"
-            // style={{
-            //   background:
-            //     "linear-gradient(180deg, var(--my-primary) 0%, rgba(0,209,242, 0.984375) 0.01%, rgba(124,58,237, 0.3) 100%)",
-            // }}
-          ></div>
+      <div className="pt-20 lg:pt-40 grid grid-cols-1 lg:grid-cols-[1fr_40%_1fr] w-full gap-5 lg:gap-7 place-items-center relative">
+        <div
+          className="absolute left-0 right-0 top-0 m-auto max-w-3xl w-full h-full blur-[160px] z-0"
+          style={{
+            background:
+              "linear-gradient(100deg, var(--my-primary) 5%, rgba(0,209,242, 0.2) 0.01%, rgba(124,58,237, 0.3) 100%)",
+          }}
+        ></div>
+
+        <div className="w-full h-[300px] lg:h-[320px] xl:h-[400px] relative">
           <motion.div
-            animate={{ y: [0, -30, 0] }}
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-full h-full relative overflow-hidden rounded-3xl"
+            className="w-full h-full relative overflow-hidden rounded-3xl before:content-[''] before:absolute before:inset-0 before:z-10 before:bg-gradient-to-r before:from-my-bg-dark/60 before:via-transparent before:to-my-dark/60"
           >
             <Image
-              src="/images/my-bini.jpg"
+              src="/images/dashboard3.jpg"
+              alt="Deskripsi gambar"
+              style={{ objectFit: "cover" }}
+              className="border border-zinc-500/30"
+              fill
+            />
+          </motion.div>
+        </div>
+        <div className="w-full h-[300px] lg:h-[400px] xl:h-[500px] relative">
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full h-full relative overflow-hidden rounded-3xl before:content-[''] before:absolute before:inset-0 before:z-10 before:bg-gradient-to-r before:from-my-bg-dark/60 before:via-transparent before:to-my-dark/60"
+          >
+            <Image
+              src="/images/dashboard2.jpg"
+              alt="Deskripsi gambar"
+              style={{ objectFit: "cover" }}
+              className="border border-zinc-500/30"
+              fill
+            />
+          </motion.div>
+        </div>
+        <div className="w-full h-[300px] lg:h-[320px] xl:h-[400px] relative">
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full h-full relative overflow-hidden rounded-3xl before:content-[''] before:absolute before:inset-0 before:z-10 before:bg-gradient-to-r before:from-my-bg-dark/60 before:via-transparent before:to-my-dark/60"
+          >
+            <Image
+              src="/images/dashboard4.jpg"
               alt="Deskripsi gambar"
               style={{ objectFit: "cover" }}
               className="border border-zinc-500/30"
@@ -95,3 +127,13 @@ const HeroMain = () => {
 };
 
 export default HeroMain;
+
+{
+  /* <div
+            className="absolute left-0 right-0 top-12 m-auto max-w-3xl w-full h-full blur-[160px]"
+            style={{
+              background:
+                "linear-gradient(180deg, var(--my-primary) 0%, rgba(0,209,242, 0.984375) 0.01%, rgba(124,58,237, 0.3) 100%)",
+            }}
+          ></div> */
+}

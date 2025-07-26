@@ -1,7 +1,6 @@
 "use client";
 
 import DescriptionUs from "@/components/bodyContent/DescriptionUs";
-import DescriptionUs2 from "@/components/bodyContent/DescriptionUs2";
 import OurServices from "@/components/bodyContent/OurServices";
 import Portfolio from "@/components/bodyContent/Portfolio";
 import WhyUs from "@/components/bodyContent/WhyUs";
@@ -27,8 +26,6 @@ export default function HomePage() {
 
       <main>
         <DescriptionUs />
-
-        <DescriptionUs2 />
 
         <OurServices />
 

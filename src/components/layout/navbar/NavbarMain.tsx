@@ -14,16 +14,20 @@ const mainMenu: MenuItems[] = [
     href: "/",
   },
   {
+    name: "Tentang Kami",
+    href: "#about-us",
+  },
+  {
     name: "Portfolio",
-    href: "/portfolio",
+    href: "#portfolio",
   },
   {
     name: "Layanan",
-    href: "/services",
+    href: "#services",
   },
   {
-    name: "Tentang Kami",
-    href: "/about-us",
+    name: "Hubungi Kami",
+    href: "#call-us",
   },
 ];
 

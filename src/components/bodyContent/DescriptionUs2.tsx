@@ -1,6 +1,6 @@
 const DescriptionUs2 = () => {
   return (
-    <section id="desc" className="container-content mt-32 lg:mt-44">
+    <section id="desc" className="container-content pt-40 lg:pt-64">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div className="order-2 lg:order-1 font-normal text-zinc-500 text-base lg:text-lg xl:text-xl">
           Kami menaruh perhatian besar pada proses kerja yang rapi, terstruktur,
