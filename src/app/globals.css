@@ -120,7 +120,8 @@
   --my-blue: oklch(0.517 0.185 276.9); /* #3e59db */
   --my-light-blue: oklch(0.877 0.078 258.8); /* #bccefb */
   --my-cyan: rgb(0, 209, 242); /* #5bd1d7 */
-  --my-purple: oklch(0.754 0.129 307.4); /* #d09ae4 */
+  /* --my-purple: oklch(0.754 0.129 307.4);  */
+  --my-purple: rgba(124, 58, 237);
   --my-light-green: oklch(73.706% 0.13199 159.528); /* #52c88b */
   --my-yellow: oklch(0.824 0.148 86.2); /* #f0bf4c */
   --my-orange: oklch(0.618 0.206 42.5); /* #e2552d */
@@ -199,6 +200,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .container-content {
+    @apply max-w-screen-xl mx-auto px-5 xl:px-0;
+  }
 }
 
 @keyframes meteor {
@@ -217,4 +222,18 @@
 
 .animate-meteor {
   animation: meteor linear infinite;
+}
+
+.heading-gradient {
+  @apply bg-clip-text text-transparent;
+}
+
+.gradient-white-fade {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    179.1deg,
+    #ffffff 0.77%,
+    rgba(255, 255, 255, 0) 182.09%
+  );
 }
